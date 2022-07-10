@@ -24,5 +24,26 @@ Ten out of the twelve stocks had negative gains for the year 2018. The two stock
 The biggest difference between the original code and the refactored code is the use of arrays. By having the stock starting and ending prices, as well as their total daily volumes stored as arrays we are able to cut out a nested loop from the original code that cause a longer execution time for the code. These arrays are able to store multiple values, so here they are set to store twelve values for the twelve stocks that are being analyzed. 
 
 
-<img src="" height="280">
-<img src="" height="280">
+<img src="https://github.com/sparrishmatt/stock-analysis/blob/main/Resources/Array%20creation.png" height="280">
+<img src="https://github.com/sparrishmatt/stock-analysis/blob/main/Resources/Array%20output.png" height="280">
+
+The for loop from the second screenshot allows all of the outputs to be inserted into the spreadsheet in order and quickly. An important question that comes after refactoring this code is about how much time has the refactor actually saved when so few stocks are being analyzed here. 
+
+#### Original and refactored execution time for 2017
+
+<img src="https://github.com/sparrishmatt/stock-analysis/blob/main/Resources/2017_Timer_Original.png" height="280">
+<img src="https://github.com/sparrishmatt/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png" height="280">
+
+#### Original and refactored execution time for 2018
+
+<img src="https://github.com/sparrishmatt/stock-analysis/blob/main/Resources/2018_Timer_Original.png" height="280">
+<img src="https://github.com/sparrishmatt/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png" height="280">
+
+Saving around .4 seconds when the program is only working with 12 stocks shows the importance of this refactor. The amount of time that could be saved using extremely large datasets has to be great. 
+
+---
+### Pros and cons to refactoring code
+
+The success of this refactor is clear when looking at the amount of time saved compared to the original. But is a refactor always worth it? For something like a stock market analysis where a person might want to analyze large datasets multiple times then a refactor is clearly worth it if a great time save can be guaranteed. However, if it couldn't be guaranteed that a refactor would save as much time, or if the code was being used less often or for smaller datasets then it might not be worth it. 
+
+Refactoring does take time, and while this refactor was fairly small and guided that won't always be the case. Consider the case where Person A has to refactor the code of Person B, and Person B wrote much more code than in this VBA macro. Not only will Person A have to take time to understand how Person B wrote their code, they will have to then spend even more time on their refactor that could have been spent working on new projects. So yes, the pros outweight the cons for this refactor, but should be considered on a case by case basis for other refactors.
